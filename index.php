@@ -56,13 +56,15 @@
     $root = dirname(__FILE__);
     switch ($root)
     {
-        case "C:\xampp\htdocs\blog";
+        case "C:\\xampp\\htdocs\\blog";
             define('ENVIRONMENT','development');
         break;
         default :
             define('ENVIRONMENT','production');
         break;
     }
+    
+    
 	
 /*
  *---------------------------------------------------------------
