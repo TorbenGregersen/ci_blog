@@ -53,8 +53,17 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-
+    $root = dirname(__FILE__);
+    switch ($root)
+    {
+        case "C:\xampp\htdocs\blog";
+            define('ENVIRONMENT','development');
+        break;
+        default :
+            define('ENVIRONMENT','production');
+        break;
+    }
+	
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
